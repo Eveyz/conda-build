@@ -1,0 +1,26 @@
+package:
+  name: 'znz'
+  version: "1.1.0"
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --ignore-installed -vv "
+
+source:
+  path: ../
+  # fn: ../znz.tar
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - sphinx
+    - numpy
+
+  run:
+    - numpy
+    - python
+
+test:
+  imports:
+    - znz
